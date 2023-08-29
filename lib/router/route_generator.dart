@@ -8,7 +8,7 @@ class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings){
     switch(settings.name){
       case '/stateful':
-        return  _fadeRoute(const CounterView(), '/stateful');
+        return  _fadeRoute(const CounterView(base:'0'), '/stateful');
       case '/provider':
         return  _fadeRoute(const CounterProviderView(), '/provider');
       default:
