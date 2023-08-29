@@ -23,6 +23,12 @@ class Flurorouter {
     } 
   );
   
-  static Handler _counterProviderHandler = Handler(handlerFunc: (context, params) => CounterProviderView());
+  static Handler _counterProviderHandler = Handler(
+    handlerFunc: (context, params) {
+      
+      return CounterProviderView(base:params['q']?[0]??'5');
+    } 
+  );
+
   static Handler _pageNotFound = Handler(handlerFunc: (_, __) => View404());
 }
